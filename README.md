@@ -11,11 +11,11 @@ The data comes from the MIT Election Data and Science Lab and contains state lev
 
 ## Data Cleaning
 
-* Standardized column names and removed extra spaces from text
-* Converted columns to the correct data types
+* Made column names lowercase and removed extra spaces from text
+* Converted writein to True/False
 * Dropped the empty notes column
-* Filled missing party_detailed values from party_simplified
-* Kept rows with no candidate name (grouped "other" votes) and flagged them so they are never picked as winners
+* Filled missing party_detailed values from party_simplified and missing writein values with False
+* Kept rows with no candidate name (grouped "other" votes) and flagged them in the presidential data so they are never picked as winners
 * Checked for duplicates, negative votes and vote totals that did not add up (none found)
 * For Georgia races decided by a runoff (1992, 2008 and 2020), kept only the runoff result
 * Counted the January 2021 Georgia runoffs as part of 2020
@@ -40,7 +40,7 @@ No rows were dropped because of missing values.
 
 ## Tools
 
-Python, Pandas, NumPy, Matplotlib, Jupyter Notebook
+Python, Pandas, Matplotlib, Jupyter Notebook
 
 ## How to Run
 
